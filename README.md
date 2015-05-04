@@ -37,6 +37,7 @@ Aside from Angular metrics, the tool also, using the Performance API, allows for
 | Attribute  | 	Description | 	Example  |
 |------------|----------------|-----|
 | `templateUrl`| Specifies the location to the HTML template (required)  | `<div ng-performance="views/ngPerformance.html"><div>` |
+| `on/off/param`| Specifies whether to display the panel always (on), never (off), or via Url parameter  | `<div ng-performance="views/ngPerformance.html" param="performance"><div>` |
 
 ## Advanced Usage
 In order to use the non-angular page load metrics, the Performance API is required in your entry point.  As such, this directive is really indended for SPA's or applications with some base layout file that is included on every page.  In short, collection of several attribute value 'times' are required throughout your entry point (usually index.html).  Needed variables are set by using simple Performance.Now offsets and then passed through to the directive via the $window object.  See the Page Load Demo for examples of how to use the Page Load metrics.  
