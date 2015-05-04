@@ -1,0 +1,109 @@
+<div>
+  <style>
+    #perfStats {
+      position: fixed;
+      right: 0;
+      bottom: 15px;
+      z-index: 100000;
+      background-color: rgba(250, 249, 244, 0.97);
+      border: 3px solid #843376;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      box-shadow: 0 1px 4px black;
+      padding: 0 15px 15px;
+      font-size: 0.65em;
+    }
+    #perfStats h3 {
+      margin-bottom: 0;
+    }
+    #perfStats td:last-child {
+      text-align: right;
+    }
+  </style>
+  <div id="perfStats">
+    <div id="perfStatsPanel">
+      <h3>ANGULAR STATS</h3>
+      <table class="table table-condensed">
+        <tbody>
+        <tr>
+          <td>Total Scopes:</td>
+          <td><span id="scopes">-</span></td>
+        </tr>
+        <tr>
+          <td>Total Watchers:</td>
+          <td><span id="watchers">-</span></td>
+        </tr>
+        <tr>
+          <td>Dirty Checks:</td>
+          <td><span id="dirty-checks">-</span></td>
+        </tr>
+        <tr>
+          <td>Digest Cycles:</td>
+          <td><span id="digest-cycles">-</span></td>
+        </tr>
+        <tr>
+          <td>Digest Cycle (last):</td>
+          <td>
+            <span id="digest-ms">-</span> ms<br>
+            <span id="digest-fps">-</span> FPS
+          </td>
+        </tr>
+        <tr>
+          <td>Digest Cycle (avg):</td>
+          <td>
+            <span id="avg-digest-ms">-</span> ms<br>
+            <span id="avg-digest-fps">-</span> FPS
+          </td>
+        </tr>
+        <tr>
+          <td>Digest Cycle (max):</td>
+          <td>
+            <span id="max-digest-ms">-</span> ms<br>
+            <span id="max-digest-fps">-</span> FPS
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>PAGELOAD STATS</h3>
+      <table class="table table-condensed">
+        <tbody>
+        <tr>
+          <td>Head Load:</td>
+          <td><span id="head-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Body Load:</td>
+          <td><span id="body-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Footer Load:</td>
+          <td><span id="footer-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Vendor Script Load:</td>
+          <td><span id="vendor-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>App Load:</td>
+          <td><span id="app-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Metrics Load:</td>
+          <td><span id="metrics-load">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Time To End-of-Page:</td>
+          <td><span id="time-to-eop">-</span> ms</td>
+        </tr>
+        <tr>
+          <td>Time To Angular:</td>
+          <td><span id="time-to-ng">-</span> ms</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
