@@ -11,13 +11,13 @@ Angular performance tracking for scopes, watchers, and other page load statistic
 
 
 ```html
-Always On
+**Always On**
 <div ng-performance templateUrl="views/ngPerformance.html" on></div>
 
-Always Off (default)
+**Always Off** (default)
 <div ng-performance templateUrl="views/ngPerformance.html" off></div>
 
-Display By Url Parameter Only
+**Display By Url Parameter Only**
 <div ng-performance templateUrl="views/ngPerformance.html" param="performance"></div>
 ```
 
