@@ -5,20 +5,20 @@ Angular performance tracking for scopes, watchers, and other page load statistic
 
 ## Basic Usage
 * download, clone or fork it
-* (TO BE COMPLETED) Or install it using [bower](http://twitter.github.com/bower/) `bower install angular-ngPerformance`
+* (TO BE COMPLETED, not yet available) Or install it using [bower](http://twitter.github.com/bower/) `bower install angular-ngPerformance`
 * Include the `ngPerformance.js` script provided by this component into your app.
 * Copy the `ngPerformance.html` template provided by this component into desired views folder.
-* Add `'blndspt-ngPerformance'` as a module dependency to your app: `angular.module('app', ['blndspt-ngPerformance'])`
+* Add `'blndspt.ngPerformance'` as a module dependency to your app: `angular.module('app', ['blndspt.ngPerformance'])`
 
-**Always On** (TO BE COMPLETED)
+**Always On** (TO BE COMPLETED, not yet available)
 ```html
 <div ng-performance templateUrl="views/ngPerformance.html" on></div>
 ```
-**Always Off** (default)  (TO BE COMPLETED)
+**Always Off** (default)  (TO BE COMPLETED, not yet available)
 ```html
 <div ng-performance templateUrl="views/ngPerformance.html" off></div>
 ```
-**Display By Url Parameter Only**  (TO BE COMPLETED)
+**Display By Url Parameter Only**  (TO BE COMPLETED, not yet available)
 ```html
 <div ng-performance templateUrl="views/ngPerformance.html" param="performance"></div>
 ```
@@ -47,7 +47,7 @@ Aside from Angular metrics, the tool also, using the Performance API, allows for
 * Time To End-of-Page
 * Time To Angular
 
-## Attribute Usage  (TO BE COMPLETED)
+## Attribute Usage  (TO BE COMPLETED, not yet available)
 | Attribute  | 	Description | 	Example  |
 |------------|----------------|-----|
 | `templateUrl`| Specifies the location to the HTML template (required)  | `<div ng-performance templateUrl="views/ngPerformance.html"><div>` |
