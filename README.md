@@ -12,7 +12,7 @@ Angular performance tracking for scopes, watchers, and other page load statistic
 
 **Template URL** (TO BE COMPLETED, not yet available)
 ```html
-<div ng-performance templateUrl="views/ngPerformance.html" on></div>
+<div ng-performance templateUrl="views/ngPerformance.html"></div>
 ```
 
 ## Demo
