@@ -10,6 +10,9 @@ Angular performance tracking for scopes, watchers, and other page load statistic
 * Copy the `ngPerformance.html` template provided by this component into desired views folder.
 * Add `'blndspt.ngPerformance'` as a module dependency to your app: `angular.module('app', ['blndspt.ngPerformance'])`
 
+Install Video
+https://youtu.be/YQ52cZe0eLc
+
 **Template URL** (TO BE COMPLETED, not yet available)
 ```html
 <div ng-performance templateUrl="views/ngPerformance.html"></div>
