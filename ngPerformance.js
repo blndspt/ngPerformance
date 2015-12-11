@@ -27,7 +27,7 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
       function ($log, $window, $document, $rootScope) {
 
         //Initialize performance stats variables
-        var ngStart = (performance != null) ? performance.now() : 0;
+        var ngStart = (performance !== null) ? performance.now() : 0;
         var stats = ($window.perfStats) ? $window.perfStats :
         {
           TTLB: 0,
@@ -72,7 +72,9 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
         };
 
         return {
-          templateUrl: 'views/ngPerformance.html',
+          templateUrl: function(elem,attrs) {
+            return attrs.ngPerformanceTemplateUrl || 'bower_components/ngPerformance/ngPerformance.html';
+          },
           restrict: 'EA',
           link: function (/*scope, element, attrs*/) {
 
@@ -111,12 +113,18 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
 
             // If the browser doesn't support Web Performance API
             // (I'm looking at you, Safari), don't even try.
-            if (performance != null) {
+            if (performance !== null) {
               var digestCycles = 0,
                 digestStart = 0,
                 sumDigestMs = 0,
                 maxDigestMs = 0,
                 dirtyChecks = 0;
+
+              // ensure the watchers array exists
+              if(!angular.isArray($rootScope.$$watchers)){
+                $rootScope.$$watchers = [];
+              }
+                            
 
               // $digest loop uses a reverse while.
               // Pushing onto the end of $$watchers array makes this run first...
@@ -183,12 +191,12 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
                       // NOTE: This technique for timing the $digest cycles
                       //       DOES capture time spent processing the asyncQueue!
                       // $rootScope.$$asyncQueue.unshift({
-                      // 	scope: $rootScope,
-                      // 	expression: function (scope) {
-                      // 		// $log.debug('$rootScope.$evalAsync: digestStart');
-                      // 		digestStart = performance.now();
-                      // 		digestCycles++;
-                      // 	}
+                      //    scope: $rootScope,
+                      //    expression: function (scope) {
+                      //        // $log.debug('$rootScope.$evalAsync: digestStart');
+                      //        digestStart = performance.now();
+                      //        digestCycles++;
+                      //    }
                       // });
 
                       // Clear digestStart for next "dirty loop."
