@@ -99,14 +99,14 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
               '#time-to-ng': $document[0].querySelector('#time-to-ng'),
             };
 
-            _setText('#head-load', stats.headLoad.toFixed(1));
-            _setText('#body-load', stats.bodyLoad.toFixed(1));
-            _setText('#footer-load', stats.footerLoad.toFixed(1));
-            _setText('#vendor-load', stats.vendorScriptLoad.toFixed(1));
-            _setText('#app-load', stats.appLoad.toFixed(1));
-            _setText('#metrics-load', stats.metricsLoad.toFixed(1));
-            _setText('#time-to-eop', stats.TTLB.toFixed(1));
-            _setText('#time-to-ng', stats.timeToAngular.toFixed(1));
+            if (stats.headLoad !== undefined) { _setText('#head-load', stats.headLoad.toFixed(1)) };
+            if (stats.bodyLoad !== undefined) { _setText('#body-load', stats.bodyLoad.toFixed(1)) };
+            if (stats.footerLoad !== undefined) { _setText('#footer-load', stats.footerLoad.toFixed(1)) }
+            if (stats.vendorScriptLoad !== undefined) { _setText('#vendor-load', stats.vendorScriptLoad.toFixed(1)) };
+            if (stats.appLoad !== undefined) { _setText('#app-load', stats.appLoad.toFixed(1)) };
+            if (stats.metricsLoad !== undefined) { _setText('#metrics-load', stats.metricsLoad.toFixed(1)) };
+            if (stats.TTLB !== undefined) { _setText('#time-to-eop', stats.TTLB.toFixed(1)) };
+            if (stats.timeToAngular !== undefined) { _setText('#time-to-ng', stats.timeToAngular.toFixed(1)) };
 
 
             // If the browser doesn't support Web Performance API
