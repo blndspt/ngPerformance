@@ -72,7 +72,7 @@ var ngPerformanceModule = angular.module('blndspt.ngPerformance', []);
         };
 
         return {
-          templateUrl: '/app/blocks/performance/ngPerformance.html',
+          templateUrl: 'views/ngPerformance.html',
           restrict: 'EA',
           link: function (/*scope, element, attrs*/) {
 
